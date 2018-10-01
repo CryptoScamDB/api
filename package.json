@@ -32,6 +32,7 @@
     "@types/webpack-node-externals": "^1.6.3",
     "awesome-typescript-loader": "^5.2.1",
     "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
     "husky": "^1.0.1",
     "lint-staged": "^7.3.0",
     "mocha": "^5.2.0",
@@ -51,9 +52,10 @@
     "tscheck": "tsc --noEmit --project tsconfig.json",
     "tslint": "tslint --project .",
     "test": "mocha -r ts-node/register tests/**/*.ts",
-    "prepublishOnly": "npm run clean && npm run build",
+    "prepublishOnly": "npm run clean && npm run build:prod",
     "clean": "rimraf ./lib",
     "build": "webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
     "prettier:diff": "prettier --write --config ./.prettierrc --list-different 'src/**/*.ts'"
   },
   "lint-staged": {
