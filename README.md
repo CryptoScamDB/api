@@ -41,6 +41,8 @@ See [`cache.ts`](https://github.com/CryptoScamDB/api/blob/master/src/cache.ts#L1
 
 ## Example
 
+### Node.js
+
 ```typescript
 import CryptoScamDBAPI from '@cryptoscamdb/api';
 
@@ -50,6 +52,21 @@ const options = {
     }
 };
 const api = new CryptoScamDBAPI(options);
+
+// Equal to https://cryptoscamdb.org/api/check/example.com
+api.check('example.com')
+    .then(result => {
+        // Do something with the result
+        console.log(result.entries);
+    })
+    // Handle error
+    .catch(console.error);
+```
+
+### Browser
+```typescript
+// API is available as `window.csdbapi`
+const api = new window.csdbapi();
 
 // Equal to https://cryptoscamdb.org/api/check/example.com
 api.check('example.com')
