@@ -13,7 +13,8 @@ const config: Configuration = {
     },
     output: {
         path: path.resolve(__dirname, 'lib'),
-        library: 'api'
+        library: 'csdbapi',
+        libraryExport: 'default'
     },
     resolve: {
         extensions: ['.ts']
