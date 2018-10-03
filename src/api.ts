@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 import { CacheProvider, MemoryCacheProvider } from './cache';
 
-export const API_ENDPOINT = 'https://cryptoscamdb.org/api';
+export const API_ENDPOINT = 'https://cryptoscamdb.org/api/v1';
 
 export interface Options {
     cache?: {
