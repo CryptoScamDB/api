@@ -53,7 +53,7 @@ const options = {
 };
 const api = new CryptoScamDBAPI(options);
 
-// Equal to https://cryptoscamdb.org/api/check/example.com
+// Equal to https://api.cryptoscamdb.org/v1/check/example.com
 api.check('example.com')
     .then(result => {
         // Do something with the result
@@ -68,7 +68,7 @@ api.check('example.com')
 // API is available as `window.csdbapi`
 const api = new window.csdbapi();
 
-// Equal to https://cryptoscamdb.org/api/check/example.com
+// Equal to https://api.cryptoscamdb.org/v1/check/example.com
 api.check('example.com')
     .then(result => {
         // Do something with the result
